@@ -48,8 +48,8 @@ const Dashboard = () => {
                     <header className="flex items-center justify-between">
                         <div className="flex items-center gap-6">
                             <div>
-                                <h1 className="text-4xl font-black tracking-tight text-text-main">Gemini Copilot</h1>
-                                <p className="text-text-muted text-sm font-medium">Orchestrating agentic workflows for your workspace.</p>
+                                <h1 className="text-4xl font-black tracking-tight text-text-main">ThinkAI Copilot</h1>
+                                <p className="text-text-muted text-sm font-medium">Agentic AI workflows for your workspace — built for AI Hackfest 2026.</p>
                             </div>
 
                             <AnimatePresence>

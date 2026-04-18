@@ -59,8 +59,8 @@ const ChatWindow = ({ onWorkflowStart, onWorkflowComplete }) => {
                         <div className="flex items-center gap-4 p-5 bg-card-bg border border-border-subtle rounded-3xl shadow-xl border-l-primary border-l-4">
                             <Loader2 className="animate-spin text-primary" size={24} />
                             <div className="flex flex-col">
-                                <span className="text-sm text-text-main font-black uppercase tracking-widest">Gemini is reasoning...</span>
-                                <span className="text-[10px] text-text-muted italic">Identifying intent & calculating multimodal execution plan.</span>
+                                <span className="text-sm text-text-main font-black uppercase tracking-widest">ThinkAI is reasoning...</span>
+                                <span className="text-[10px] text-text-muted italic">Identifying intent & executing agentic workflow plan.</span>
                             </div>
                         </div>
                     </div>

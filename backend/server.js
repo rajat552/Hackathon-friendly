@@ -49,6 +49,6 @@ app.get('/health', (req, res) => {
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-    console.log(`🚀 AI Productivity Copilot Server running on port ${PORT}`);
+    console.log(`🚀 ThinkAI Server running on port ${PORT}`);
     console.log(`Mode: ${process.env.NODE_ENV || 'development'}`);
 });

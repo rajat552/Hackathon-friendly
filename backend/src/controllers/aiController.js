@@ -5,8 +5,8 @@ const Conversation = require('../models/Conversation');
 const { successResponse, errorResponse } = require('../utils/responseHandler');
 
 exports.handleChat = async (req, res, next) => {
-    const { message } = req.body;
-    const userId = req.user?.id || 'demo-user';
+    const { message, userId: bodyUserId } = req.body;
+    const userId = bodyUserId || req.user?.id || 'demo-user';
 
     if (!message || typeof message !== 'string' || !message.trim()) {
         return errorResponse(res, 'Message is required and must be a non-empty string', 400);

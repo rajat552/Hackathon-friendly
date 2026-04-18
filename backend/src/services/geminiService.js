@@ -23,7 +23,7 @@ class GeminiService {
     /**
      * Core function to invoke Gemini model
      */
-    async invokeGemini(prompt, systemInstruction = "You are an AI Productivity Copilot.", history = []) {
+    async invokeGemini(prompt, systemInstruction = "You are ThinkAI, an AI Productivity Copilot powered by Gemini. You think deeply and make smart decisions.", history = []) {
         if (!this.isKeyValid) {
             console.log("⚠️ valid GEMINI_API_KEY not found... Running in Demo Mode.");
             return this.getMockResponse(prompt);
@@ -66,7 +66,7 @@ class GeminiService {
     }
 
     async generateResponse(prompt, history = []) {
-        return this.invokeGemini(prompt, "You are an AI Productivity Copilot. Be helpful, concise, and actionable.", history);
+        return this.invokeGemini(prompt, "You are ThinkAI, an AI Productivity Copilot. Be helpful, concise, and actionable.", history);
     }
 
     async summarizeDocument(text) {
@@ -108,7 +108,7 @@ Return a JSON object: { "intents": ["intent1", "intent2"] }`;
 
         // Smart Responses
         if (input.includes("hello") || input.includes("hey")) {
-            return "Hello! I am your AI Productivity Copilot running on Gemini. I've analyzed your current workflow and I'm ready to help you optimize your tasks. What's on your mind?";
+            return "Hello! I am ThinkAI, your AI Productivity Copilot running on Gemini. I've analyzed your current workflow and I'm ready to help you optimize your tasks. What's on your mind?";
         }
         if (input.includes("summarize") || input.includes("summary")) {
             return "Based on your recent activity, here's a summary: You have 3 high-priority tasks pending in MongoDB and your Gemini integration is currently in the final verification stage.";
@@ -117,7 +117,7 @@ Return a JSON object: { "intents": ["intent1", "intent2"] }`;
             return "I've generated a task list for you: 1. Finalize Frontend UI, 2. Test MongoDB connections, 3. Prepare Hackathon pitch. Shall I add these to your dashboard?";
         }
 
-        return "I've processed your request using Gemini. Everything looks on track for your productivity goals. Is there anything specific you'd like me to automate next?";
+        return "I've processed your request using ThinkAI. Everything looks on track for your productivity goals. Is there anything specific you'd like me to automate next?";
     }
 }
 

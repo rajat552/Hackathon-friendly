@@ -17,7 +17,7 @@ class WorkflowService {
         };
 
         try {
-            addLog("Analyzing natural language command with Gemini 2.5 Flash...");
+            addLog("Analyzing natural language command with ThinkAI (Gemini 2.5 Flash)...");
 
             // Step 1 & 2: Intent Detection
             const intentPrompt = `
@@ -74,7 +74,7 @@ class WorkflowService {
                     }
 
                     if (step.action === 'generate_tasks') {
-                        addLog("Scanning content for actionable items (Gemini Reasoning)...");
+                        addLog("Scanning content for actionable items (ThinkAI Reasoning)...");
                         const textForTasks = documentText || command;
                         const extractedTasks = await geminiService.generateTasks(textForTasks);
 
@@ -83,7 +83,7 @@ class WorkflowService {
                             try {
                                 const savedTask = await Task.create({
                                     title: t.title,
-                                    description: t.description || "Synthesized by Gemini Copilot",
+                                    description: t.description || "Synthesized by ThinkAI Copilot",
                                     status: 'pending'
                                 });
                                 finalResult.tasks.push(savedTask);
